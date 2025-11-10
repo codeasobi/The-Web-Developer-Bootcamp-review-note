@@ -1,0 +1,272 @@
+# The Web Developer Bootcamp review
+
+<!-- ## HTML -->
+MDN web docs: <https: //developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started>
+
+    <!-- open and close tags -->
+    <p>This is my <b>first</b> web page.</p>
+    <p>use <b>lorem dummy data</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos veritatis atque
+        recusandae
+        ad, quo eum eius at delectus vel! Facere laborum repellat sunt animi repudiandae similique dolorum eveniet eum
+        consequuntur.</p>
+
+    <!-- no close tag -->
+    <br>
+    <hr>
+
+    <!-- sup sub -->
+    2<sup>100</sup>
+    H<sub>2</sub>O
+    <!-- pre -->
+    <pre>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos veritatis atque
+        recusandae
+        ad, quo eum eius at delectus vel! Facere laborum repellat sunt animi repudiandae similique dolorum eveniet eum
+        consequuntur.
+    </pre>
+
+    <!-- html entities for reserved characters -->
+    <h1> 1 < 6 </h1>
+            <h1> 1 &lt; 6 </h1>
+
+            <!-- html:5 -->
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!-- search results title and browser tab title -->
+                <title>Document</title>
+                <meta name="description" content="This is a description of the page">
+            </head>
+
+            <body>
+                <!-- SEO structure for headings  -->
+                <h1>This is a heading 1 x 1</h1>
+                <h2>This is a heading 2 x 2-4 </h2>
+                <h3>This is a heading 3 x 2-6</h3>
+                <h4>This is a heading 4</h4>
+                <h5>This is a heading 5</h5>
+                <h6>This is a heading 6</h6>
+
+                <!-- semantic el.-->
+                <header class="header" role="banner">
+                    <h1>This is a header</h1>
+                </header>
+                <nav class="menu" role="navigation">
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#">Home</a></li>
+                        <li class="menu-item"><a href="#">About</a></li>
+                        <li class="menu-item"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="breadcrumb" role="navigation"></nav>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                </nav>
+                <main>
+                    <section>
+                        <p>This is a section content</p>
+                    </section>
+                    <article>
+                        <p>This is a article content</p>
+                    </article>
+                    <time datetime="2025-01-01">2025-01-01</time>
+                    <figure>
+                        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                            alt="Google Logo" width="100">
+                        <figcaption>Google Logo</figcaption>
+                    </figure>
+                </main>
+                <aside>
+                    <p>This is a aside content</p>
+                </aside>
+                <footer <p>This is a footer content</p>
+                </footer>
+                <!-- listing el. -->
+                <ol>
+                    <li>one</li>
+                    <li>two</li>
+                </ol>
+                <ul>
+                    <li>list outside
+                        <ul>
+                            <li>Apple</li>
+                            <li>Banana</li>
+                        </ul>
+                    </li>list outside
+                    <li></li>
+                </ul>
+
+                <!-- anchor tag -->
+                <!-- internal -->
+                <a href="https://www.google.com" target="_blank">Google</a>
+                <!-- external  -->
+                <a href="./Chicken.html">Chicken</a>
+                <!-- image el. -->
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                    alt="Google Logo" width="100">
+                <!-- button el. -->
+                <button>Click me</button>
+            </body>
+
+            <!-- inline el. -->
+            <span>Hello</span>
+            <span>World</span>
+            <!-- block el. -->
+            <div>Hello</div>
+            <div>World</div>
+            <!-- cmd + F5 screen reader -->
+            <!-- emmet shortcuts probably not useful after AI -->
+            <!-- html:5 -->
+            <!-- ul>li*3>a -->
+            <!-- ul>li*3>a[href="#"]{Link $}- $ 12345 -->
+            <!-- h1+h2+h3 -->
+
+            <!-- table -->
+            <!-- thead tr th / tbody tr td / one row one tr-->
+            <table>
+                <thead>
+                    <!-- table row -->
+                    <tr>
+                        <!-- table header -->
+                        <!-- rowspan: merge rows -->
+                        <!-- colspan: merge columns -->
+                        <th colspan="2">Name</th>
+                        <th>Age</th>
+                        <th rowspan="2">Email</th>
+                    </tr>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>25</td>
+                        <td>john@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- forms -->
+            <!-- http request: action is the url to send the data to -->
+            <!-- method: post, get, put, delete, default is get-->
+            <!-- enctype: multipart/form-data, application/x-www-form-urlencoded, text/plain -->
+            <form action="/submit" method="post">
+                <!--type: text, email, password, confirm-password -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <!-- label paired input-->
+                    <p>
+                        <!-- id is for the label-->
+                        <!-- name is for the url?name=value-->
+                        <label for="name">Name</label>
+                        <!-- no close tag for input -->
+                        <!-- name, id, value, placeholder-->
+                        <input type="text" id="name" name="name">
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </p>
+                    <p>
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password">
+                    </p>
+                </fieldset>
+                <!-- format2: label nested input, no need for and id -->
+                <!-- type: tel, address -->
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label>Phone
+                        <input type="tel" name="phone">
+                    </label>
+                    <label>Address
+                        <input type="text" name="address">
+                    </label>
+                </fieldset>
+                <!-- radio, checkbox, select -->
+                <fieldset>
+                    <legend>Payment Information</legend>
+                    <!-- radio -->
+                    <input type="radio" id="card" name="payment" value="card">
+                    <label for="card">Card</label>
+                    <input type="radio" id="cash" name="payment" value="cash">
+                    <label for="cash">Cash</label>
+                    <p>
+                    <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" name="card-number">
+                        <label for="expiration-date">Expiration Date</label>
+                        <input type="date" id="expiration-date" name="expiration-date">
+                    </p>
+                    <!-- checkbox -->
+                    <p>
+                        <label for="terms">Terms and Conditions</label>
+                        <input type="checkbox" id="terms" name="terms" value="terms">
+                    </p>
+                    <select name="country" id="country" title="Country">
+                        <option value="" selected>Select a country</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">UK</option>
+                        <option value="australia">Australia</option>
+                        <option value="new-zealand">New Zealand</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <!-- range, number and textarea -->
+                    <p>
+                        <label for="rating">Rating</label>
+                        <input type="range" id="rating" name="rating" min="0" max="5" step="1">
+                    </p>
+                    <p>
+                        <label for="number">Number</label>
+                        <input type="number" id="number" name="number" min="0" max="100" step="5">
+                    </p>
+                    <p>
+                        <label for="comment">Comment</label>
+                        <textarea id="comment" name="comment" rows="3" cols="30"></textarea>
+                    </p>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+            <!-- buttons details -->
+            <form action="/submit" method="post">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <!-- will not submit the form -->
+                <button type="button">Button</button>
+                <!-- use value attribute to change btn text -->
+                <input type="submit" value="click me!">
+            </form>
+            <!-- search input -->
+            <!-- name: url?q=value -->
+            <h3>Reddit</h3>
+            <form action="https://www.reddit.com/search" method="GET">
+                <input type="search" name="q" placeholder="Search">
+                <button type="submit">Search</button>
+            </form>
+            <h3>YouTube</h3>
+            <form action="https://www.youtube.com/results" method="GET">
+                <input type="search" name="search_query" placeholder="Search">
+                <button type="submit">Search</button>
+            </form>
+            <!-- don't forget innertext and type -->
+
+            <!-- form validations: min, maxrequired, disabled, readonly-->
+             <!-- min: date, month, number, time, datetime, range -->
+             <!-- max: date, month, number, time, datetime, range -->
+             <!-- required: text, email, password, confirm-password, select, checkbox, radio -->
+             <!-- disabled: text, email, password, confirm-password, select, checkbox, radio -->
+             <!-- readonly: text, email, password, confirm-password, select, checkbox, radio -->
+             <!-- pattern: text, email, password, confirm-password, select, checkbox, radio -->
+            
+            
+            <!-- other type: url, email, search, number, date, month, week, time, datetime, datetime-local, color -->
