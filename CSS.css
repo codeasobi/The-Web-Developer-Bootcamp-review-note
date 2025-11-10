@@ -339,3 +339,44 @@ div {
 body {
     font-family: Roboto;
 }
+
+/* flexbox: flexible, rwd */
+div {
+    display: flex;
+    /* default: row / along the main axis <-> */
+    flex-direction: column;
+    /* space-evenly, space-between, space-around */
+    justify-content: center; /* default: flex-start*/
+    flex-wrap: wrap;
+    /* along the cross axis | */
+    align-items: center; /* default: flex-start*/
+    align-content: center;
+}
+
+div:nth-of-type(5) {
+    align-self: center;  /* single item */
+}
+
+/* flex-basis, grow, shrink */
+.flex-item {
+    width: 200px;
+    height: 200px;
+    flex-basis: 200px;
+    /* How to divide extra space */
+    flex-grow: 1; /* Share remaining space equally */
+    /* How to handle lack of space */
+    flex-shrink: 3;
+  }
+
+  /* RWD: midia queries */
+  @media (max-width: 768px) {
+    h1 {
+        font-size: 26px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    h1 {
+        font-size: 32px;
+    }
+  }
