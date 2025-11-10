@@ -1,0 +1,341 @@
+/* CSS */
+/* MDN */
+/* https://coolors.co/ */
+
+/* avoid inline style */
+/* avoid !imporrant */
+/* <link rel="stylesheet" href="style.css"> */
+
+h2 {
+    /* don't forget semicolon, browser don't show error */
+    color: pink;
+    background-color: aliceblue;
+}
+
+/* color */
+/* rgb(0, 0, 0) */
+/* hexadecimal #FFFFFF #000*/
+
+/* text */
+h1 {
+    font-size: 10px;
+    /* absolute: px, pt, cm... */
+    /* relative: em, rem, vh, vw, %*/
+    text-align: left;
+    /* different browser might have diff results */
+    font-weight: normal;
+    font-weight: 700;
+    text-decoration: teal underline dotted;
+    text-decoration: none;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    /* different OS, browser, PC might not support */
+    font-family: serif, Arial;
+}
+
+/* selectors */
+/* universal ineffeient*/
+* {
+    color: pink;
+}
+
+button {
+    color: pink;
+}
+
+h1,
+h2 {
+    color: pink;
+}
+
+/* id selector, html id attribute is unique in one page, cannot use twice*/
+#signup {}
+
+/* class selector */
+/* don't have to be the same element */
+.tag {}
+
+/* descendant selector */
+/* element space element*/
+li a {}
+
+footer a {}
+
+.post a {}
+
+/* id should come before a tag.  */
+/* <p id="dislikes">
+  I hate eating <a href="/pickles">pickles</a> and <a href="/beets">beets</a>
+</p> */
+#dislikes a {
+    font-weight: bold;
+    color: red;
+}
+
+/* adjacent selector */
+/* h1 back's p tag */
+h1+p {
+    color: red;
+}
+
+/* direct child */
+/* nested element won't apply */
+div>li {
+    color: white;
+}
+
+/* attr. selector */
+input[type="password"] {}
+
+section[class="post"] {
+    background-color: greenyellow;
+}
+
+/* * $ different match */
+a[href*="example"] {
+    font-style: italic;
+}
+
+/* pseudo class */
+/* hover, active, checked, first, first-child, not(), nth-child(), nth-of-type()*/
+.post button:hover {
+    background-color: blueviolet;
+}
+
+.post button:active {
+    background-color: green;
+}
+
+option:checked {
+    color: red;
+    box-shadow: 0 0 0 3px lime;
+}
+
+/* nth-of-type(2n) */
+.post:nth-of-type(2n) {}
+
+/* pseudo el. */
+/* ::after, ::before, ::first-letter, ::first-line, ::selection */
+h2::first-letter {
+    font-size: 50px;
+}
+
+p::first-line {
+    color: grey;
+}
+
+p::selection {
+    background-color: orange;
+}
+
+/* The cascade: order matters */
+/* The specificity */
+/* id > class > elements */
+
+/* CSS inheritance */
+/* not every element will inherit from the closest parent */
+/* body > section > form > button, input */
+body {
+    color: purple;
+}
+
+section {
+    color: aqua;
+}
+
+form {
+    color: greenyellow;
+}
+
+button,
+input {
+    color: inherit;
+}
+
+/* box model: border box vs content box */
+/* content box: real width = border-width + padding + width... */
+/* border box is easier for counting */
+
+/* border */
+div {
+    border-width: 10px;
+    border-radius: 4px;
+    background-color: aqua;
+    border-color: greenyellow;
+    border-style: solid;
+    border-left-width: 8px;
+    border-left-color: pink;
+}
+
+div {
+    border: 4px solid black;
+}
+
+/* padding */
+
+/* margin */
+/* body has default 8px margin, h1 has default margin */
+
+/* display property */
+/* inline, block, inline-block */
+
+/* inline el does not have  width, height, padding, margin... */
+
+/* change block to inline */
+h1 {
+    display: inline;
+}
+
+/* change inline to block */
+span {
+    display: block;
+}
+
+/* behave like an inline el, and width, height, padding, margin are respected*/
+/* html 
+<div></div>
+<div></div>
+<div></div> */
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    border: 5px solid black;
+    margin: 50px;
+    /* compareinline, block, inline-block, diff results */
+    display: inline-block;
+    /* in the HTML, but now showing */
+    /* display: none */
+}
+
+/* CSS units: %, px, em, rem */
+/* %: width: half of the parents */
+/* %: line-height: half of the font-size of the el itself */
+
+div {
+    width: 50%;
+}
+
+h1 {
+    line-height: 50%;
+}
+
+/* em */
+/* nested parent problem  */
+/* 2em: double by layers number, font size, padding... */
+
+/* rem */
+/* based on roots */
+
+html {
+    font-size: 16px;
+    /* rem base */
+}
+
+.element {
+    font-size: 2rem;
+    /* 32px (16 × 2) */
+    padding: 1.5rem;
+    /* 24px (16 × 1.5) */
+}
+
+
+/* opacity */
+/* rgba for background, 0 is transparent */
+div {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+/* transparent applies on whole el., 0 is transparent */
+div {
+    opacity: 0.7;
+}
+
+/* position */
+/* static, default mode */
+
+/* relative */
+/* top, bottom, left, right, based on original position */
+/* fixed */
+
+/* absolute */
+/* top, bottom, left, right, based on parent position */
+
+/* fixed */
+/* top, bottom, left, right, based on screen */
+
+/* sticky */
+/* topなどの基準位置は、直近の親要素のうち,
+overflowが「hidden,autoもしくはscroll」となっているものとなり、
+親要素のoverflowがvisible(default)となっていると
+stickyは機能しなくなります。** overlowが設定されている要素が存在しない場合は
+viewportが基準**となります。 */
+
+/* trasition: property name, duration, timing function, delay */
+.circle {
+    background-color: black;
+    transition: 3s;    /* all */
+}
+
+.circle:hover {
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* specify a part */
+.circle {
+    background-color: black;
+    transition: background-color 3s;
+    transition-timing-function: ease-in-out;
+}
+
+.circle:hover {
+    background-color: white;
+    transform: translateX(100px);
+}
+
+/* Transform */
+/* rotate, scale, skew, translate, matricx */
+/* rotate: 45deg X Y Z 3d */
+div {
+    transform: rotate(45deg);
+    transform: rotateX(45deg);
+}
+
+/* scale: 2 0.5 X Y Z 3d */
+div {
+    transform: scale(2);
+    transform: scaleY(2);
+}
+
+/* translate(moving): px % X Y Z 3d */
+div {
+    transform: translateX(50%);
+    transform: translateY(50%);
+}
+
+/* skew: 30deg X Y Z 3d */
+div {
+    transform: skew(30deg, 50deg);
+}
+
+/* background */
+div {
+    width: 80%;
+    height: 900px;
+    /* put in one line */
+    background: center/cover url(""), url("");
+    background: center/40% url(""), url("");
+    /* easy to readability */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("");
+    /* auto repeat cover contain */
+    background-size: contain;
+}
+
+/* google font: link href */
+body {
+    font-family: Roboto;
+}
