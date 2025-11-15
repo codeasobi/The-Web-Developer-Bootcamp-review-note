@@ -97,7 +97,7 @@ a[href*="example"] {
 }
 
 /* pseudo class */
-/* hover, active, checked, first, first-child, not(), nth-child(), nth-of-type()*/
+/* hover, active, checked, first, first-child, not(), d-child(), nth-of-type()*/
 .post button:hover {
     background-color: blueviolet;
 }
