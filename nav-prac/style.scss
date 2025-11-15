@@ -1,0 +1,96 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: black;
+    padding: 0;
+    position: relative;
+  
+    /* hamburger icon (hidden by default) */
+    .hamburger {
+      display: none;
+      color: gold;
+      font-size: 24px;
+      padding: 15px;
+      cursor: pointer;
+    }
+  
+    /* hidden checkbox */
+    .menu-toggle {
+      display: none;
+    }
+  
+    /* nav list */
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      transition: all 0.3s ease-in-out;
+  
+      li {
+        margin: 0;
+        padding: 0;
+  
+        a {
+          display: block;
+          padding: 15px 20px;
+          color: white;
+          text-decoration: none;
+  
+          &:hover {
+            background-color: #555;
+          }
+        }
+      }
+    }
+  
+    /* RWD 768px 以下 */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+  
+      .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+  
+        li {
+          text-align: center;
+        }
+      }
+  
+      /* checkbox toggle menu */
+      .menu-toggle:checked ~ .nav-list {
+        display: flex;
+      }
+  
+      /* 480px */
+      @media (max-width: 480px) {
+        .nav-list {
+          a {
+            padding: 10px;
+          }
+        }
+  
+        .hamburger {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  
